@@ -59,10 +59,15 @@ h1 {
 	padding: .3rem;
 	/*	fr unit allows you to set the size of a track
 	as a fraction of the free space of the grid container.*/
-	grid-template-columns: repeat(3, 1fr);
-	/*	We can also specify space with px unit and the rest
-	is posiitioned by using the free space of the grid container.*/
-	grid-template-rows: 1fr 1fr 50px 1fr;
+	grid-template-columns: repeat(4, 1fr);
+	/*auto value will fill the spaces by specified with template
+	area*/ 
+	grid-template-rows: auto;
+	/*We can also specify the template area by giving names. 
+	This will also give visual template in syntax*/
+	grid-template-areas: "header header header header"
+				" sidebar . main main"
+				"footer footer . footer-2";
 	/*	NOTE: after you finish designing get
 	rid of the border. After remove the border
 	the design will fit to the screen.*/
@@ -79,32 +84,30 @@ h1 {
 
 .item-1 {
 	background: var(--indigo);
-	grid-column-start: 0;
-	grid-column-end: 2;
-	grid-row-start: 1;
-	grid-row-end: end;
+	grid-area: header;
 }
 
 .item-2 {
 	background: var(--blue);
-	grid-column: 2;
-	grid-row: 3 / span end;
+	grid-area: sidebar;
 }
 
 .item-3 {
 	background: var(--purple);
-	grid-column-start: 2;
-	grid-column-end: 4;
+	grid-area: main;
 }
 
 .item-4 {
 	background: var(--pink);
+	/*We can specify coordinates in such a way:
+	grid-row-start + grid-column-start
+	+ grid-row-end + grid-column-end*/
+	grid-area: 3 / 2 / 4 / 5;
 }
 
 .item-5 {
 	background: var(--orange);
-	grid-column: 3 / 4;
-	grid-row: 2 / span end;
+	grid-area: footer-2;
 }
 
 .item-6 {

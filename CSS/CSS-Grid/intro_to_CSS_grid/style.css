@@ -139,7 +139,8 @@ like lines of the grid.*/
 }
 
 .item-3 {
-	background: var(--purple);
+	/*background: var(--purple);*/
+	background: url("https://images.unsplash.com/photo-1451256656121-9ffc0c898a49?auto=format&fit=crop&w=750&q=80");
 	grid-area: main;
 }
 

@@ -57,10 +57,12 @@ h1 {
 	height: 100%;
 	display: grid;
 	padding: .3rem;
-	/*	We can give name to lines and use them 
-	as value for properties.*/
+	/*	fr unit allows you to set the size of a track
+	as a fraction of the free space of the grid container.*/
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 1fr);
+	/*	We can also specify space with px unit and the rest
+	is posiitioned by using the free space of the grid container.*/
+	grid-template-rows: 1fr 1fr 50px 1fr;
 	/*	NOTE: after you finish designing get
 	rid of the border. After remove the border
 	the design will fit to the screen.*/

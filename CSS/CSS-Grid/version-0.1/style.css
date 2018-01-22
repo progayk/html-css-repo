@@ -53,10 +53,25 @@ h1 {
 	
 }
 
+/*------------------------------------*/
+/*Complex Grid Template Definition*/
+
+/*
+.container {
+	grid-template:
+		[row1-start] "header header header" 20px [row1-end]
+		[row2-start] "footer footer footer" 20px [row2-end]
+		/ auto 50px auto;  //<- column line values
+		;
+}
+*/
+/*-------------------------------------*/
+
+
 .container {
 	height: 100%;
 	display: grid;
-	padding: .3rem;
+	padding: 1%;  /*delete padding to apply gap*/
 	/*	fr unit allows you to set the size of a track
 	as a fraction of the free space of the grid container.*/
 	grid-template-columns: repeat(4, 1fr);
@@ -68,58 +83,61 @@ h1 {
 	grid-template-areas: "header header header header"
 				" sidebar . main main"
 				"footer footer . footer-2";
+
+	/*-------NOTE---------*/
+	/* Gaps(gutters) are only created
+	between the columns/rows, not on outer edges. 
+	*/	
+	grid-column-gap: 10px;
+	grid-row-gap: 15px;
+	/*-----------------------*/
+
 	/*	NOTE: after you finish designing get
 	rid of the border. After remove the border
 	the design will fit to the screen.*/
-	border: 2px solid red;	
+	border: 1px solid red;	
 }
 
 .container > .item {
-	border: 1px solid blue;
+	border: 2px solid yellow;
 	border-radius: .3rem;
-	margin: .3rem;
+	margin: 1%;  /*<-- delete margin to apply gap*/
 	text-align: center;
 	color: white;
+	/*Buralara biraz golge atalalim*/
+	box-shadow: 1px 3px 4px rgba(10,10,10, 0.5),
+				-1px -1px 3px rgba(10,10,10, 0.8);
 }
 
 /*==============================*/
-/* ALIGN-SELF */
+/*Grid Column and Row Gap*/
 
-/*Here the aligh-self property is explained by examples.
-It align the item inside the grid cell vertically.
-Values it can get are:
-- start
-- end
-- center
-- stretch
+/*Specify the spaces between grids. We can think of it
+like lines of the grid.*/
+
+/*
+.container {
+	grid-column-gap: <line-size>;
+	grid-row-gap: <line-size>;
+}
 */
+
 
 .item-1 {
 	background: var(--indigo);
-	width: 90%;
 	grid-area: header;
-	justify-self: center;
-	align-self: center;  /*<-- Here is align with justify*/
 }
 
 .item-2 {
 	background: var(--blue);
 	grid-area: sidebar;
-	/*it will take the width of the grid cell and 
-	proportionally set its width*/
-	width: 50%;
 /*	this property will set the horizontal position
 	of the item in the grid.*/
-	justify-self: start;
-	align-self: end;
 }
 
 .item-3 {
 	background: var(--purple);
 	grid-area: main;
-	width: 80%;
-	justify-self: end;
-	align-self: start;
 }
 
 .item-4 {
@@ -129,9 +147,6 @@ Values it can get are:
 	+ grid-row-end + grid-column-end*/
 	grid-area: 3 / 2 / 4 / 5;
 	/*width: 60%;*/
-	justify-self: stretch;
-	height: 80%;
-	align-self: stretch;
 }
 
 /*.item-5 {

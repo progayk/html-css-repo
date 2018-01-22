@@ -79,13 +79,14 @@ h1 {
 	border-radius: .3rem;
 	margin: .3rem;
 	text-align: center;
-	
+	color: white;
 }
 
 /*==============================*/
-/*JUSTIFY-SELF*/
+/* ALIGN-SELF */
 
-/*Here the justify-self property is explained by examples.
+/*Here the aligh-self property is explained by examples.
+It align the item inside the grid cell vertically.
 Values it can get are:
 - start
 - end
@@ -98,17 +99,19 @@ Values it can get are:
 	width: 90%;
 	grid-area: header;
 	justify-self: center;
+	align-self: center;  /*<-- Here is align with justify*/
 }
 
 .item-2 {
 	background: var(--blue);
 	grid-area: sidebar;
 	/*it will take the width of the grid cell and 
-	proportionally set its width
-*/	width: 50%;
+	proportionally set its width*/
+	width: 50%;
 /*	this property will set the horizontal position
-	of the item in the grid.
-*/	justify-self: start;
+	of the item in the grid.*/
+	justify-self: start;
+	align-self: end;
 }
 
 .item-3 {
@@ -116,6 +119,7 @@ Values it can get are:
 	grid-area: main;
 	width: 80%;
 	justify-self: end;
+	align-self: start;
 }
 
 .item-4 {
@@ -126,6 +130,8 @@ Values it can get are:
 	grid-area: 3 / 2 / 4 / 5;
 	/*width: 60%;*/
 	justify-self: stretch;
+	height: 80%;
+	align-self: stretch;
 }
 
 /*.item-5 {

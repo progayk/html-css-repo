@@ -82,19 +82,40 @@ h1 {
 	
 }
 
+/*==============================*/
+/*JUSTIFY-SELF*/
+
+/*Here the justify-self property is explained by examples.
+Values it can get are:
+- start
+- end
+- center
+- stretch
+*/
+
 .item-1 {
 	background: var(--indigo);
+	width: 90%;
 	grid-area: header;
+	justify-self: center;
 }
 
 .item-2 {
 	background: var(--blue);
 	grid-area: sidebar;
+	/*it will take the width of the grid cell and 
+	proportionally set its width
+*/	width: 50%;
+/*	this property will set the horizontal position
+	of the item in the grid.
+*/	justify-self: start;
 }
 
 .item-3 {
 	background: var(--purple);
 	grid-area: main;
+	width: 80%;
+	justify-self: end;
 }
 
 .item-4 {
@@ -103,9 +124,11 @@ h1 {
 	grid-row-start + grid-column-start
 	+ grid-row-end + grid-column-end*/
 	grid-area: 3 / 2 / 4 / 5;
+	/*width: 60%;*/
+	justify-self: stretch;
 }
 
-.item-5 {
+/*.item-5 {
 	background: var(--orange);
 	grid-area: footer-2;
 }
@@ -137,4 +160,4 @@ h1 {
 .item-12 {
 	background: var(--cyan);
 
-}
+}*/

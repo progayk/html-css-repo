@@ -1,0 +1,56 @@
+
+html{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+/*=============================*/
+/*NOTE: Here is the trick to fit 
+the content to full screen*/
+body {
+	margin: 0;
+/*	when we set body height to 100% it overflows the html
+if a border is set*/
+	height: 98%;  /* <-- VERY IMOPRTANT HACK!!!! */
+}
+
+div {
+	display: block;
+	border: 2px solid red;
+}
+
+.header {
+/*	display: flex;
+	flex-wrap: wrap;
+*/
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 80px;
+	width: 100%;
+}
+
+.main {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.footer {
+	margin: 0;
+	padding: 0;
+	height: 160px;
+	width: 100%;
+}
+
+
+.brand-name {
+	width: 40%;
+}
+
+.login-form-container {
+	width: 40%;
+}

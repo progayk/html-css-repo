@@ -47,3 +47,9 @@ property kullanarak 3D (3 boyutlu) tasarimlar yaratabiliyoruz.
 	background: rgba(76, 145, 65, 0.2);
 	z-index: 3;
 }
+
+.resimli {
+	background: url("https://images.unsplash.com/photo-1480365192324-83232188157e?auto=format&fit=crop&w=1350&q=80");
+	background-size: cover;
+	background-position: center;
+}

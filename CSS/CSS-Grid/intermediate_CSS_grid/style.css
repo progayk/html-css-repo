@@ -10,6 +10,12 @@
 	grid-template-columns: repeat(12, 1fr);
 	grid-auto-rows: 200px;
 	grid-gap: 1rem;
+	-webkit-transform: skewY(-12deg);
+	   -moz-transform: skewY(-12deg);
+	    -ms-transform: skewY(-12deg);
+	     -o-transform: skewY(-12deg);
+	        transform: skewY(-12deg);
+	transform-origin: 100;
 }
 
 .cell {
